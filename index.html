@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Water Quality</title>
+    <script>
+      src = "https://cdn.tailwindcss.com";
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"
+      integrity="sha512-4UKI/XKm3xrvJ6pZS5oTRvIQGIzZFoXR71rRBb1y2N+PbwAsKa5tPl2J6WvbEvwN3TxQCm8hMzsl/pO+82iRlg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+
+  <body>
+    <h1
+      class="text-center text-red-500 underline decoration-4 font-bold text-2xl"
+    >
+      Water Quality Data Visualization Dashboard
+    </h1>
+    <main class="mt-8">
+      <div class="">
+        <div class="flex flex-row justify-center">
+          <div id="region-select"></div>
+          <div id="district-select"></div>
+        </div>
+        <div
+          class="grid grid-cols-3 grid-row-3 place-content-stretch gap-4 mt-4"
+        >
+          <div>
+            <h4>
+              Bubble Chart showing Electrical Conductivity (µs/cm) per District
+            </h4>
+            <div id="bubblechart"></div>
+          </div>
+          <div>
+            <h4>
+              Doughnut Chart showing Electrical Conductivity (µs/cm) per
+              District
+            </h4>
+            <div class="" id="donughtchart"></div>
+          </div>
+          <div>
+            <h4>
+              Scatter plot showing Electrical Conductivity (µs/cm) per District
+            </h4>
+            <div class="" id="scatterplot"></div>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 grid-row-3 place-content-stretch gap-4">
+          <div>
+            <h1>
+              BarChart showing Electrical Conductivity (µs/cm) per District
+            </h1>
+            <div class="" id="barchart"></div>
+          </div>
+          <div>
+            <h4>
+              Group Bar Chart showing Electrical Conductivity (µs/cm) per
+              District
+            </h4>
+            <div class="" id="groupedbarchart"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
